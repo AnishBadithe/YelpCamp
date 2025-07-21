@@ -55,7 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(mongoSanitize({ replaceWith: '_' }));
 
 const store = MongoStore.create({
-    mongoUrl : 'mongodb://127.0.0.1:27017/yelp-camp',
+    mongoUrl : dbURL,
     touchAfter: 24 * 3600,
     crypto: {
         secret: 'thisshouldbeabettersecret'
