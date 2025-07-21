@@ -33,7 +33,6 @@ const MongoStore = require('connect-mongo');
 
 //connecting to database
 mongoose.connect(dbURL);
-//mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp');
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
